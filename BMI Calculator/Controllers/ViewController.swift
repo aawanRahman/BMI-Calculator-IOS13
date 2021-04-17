@@ -10,11 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heightLabel: UILabel!
+    
+    @IBOutlet weak var weightLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func heightSliderUsed(_ sender: UISlider) {
+        let heightvalue = String(format: "%0.2f", sender.value)
+        heightLabel.text = "\(heightvalue) m"
+    }
+    
+    @IBAction func weightSliderUsed(_ sender: UISlider) {
+         let weightValue = String(format: "%0.1f", sender.value)
+        weightLabel.text = "\(weightValue) kg"
+    }
+    
+    @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationViewController = segue.destination as! ResultViewController
+            
+            
+            
+        }
+    }
 }
 
