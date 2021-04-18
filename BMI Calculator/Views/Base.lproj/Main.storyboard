@@ -127,7 +127,9 @@
                     </view>
                     <connections>
                         <outlet property="heightLabel" destination="Xcz-1j-2c9" id="LJc-xQ-Esn"/>
+                        <outlet property="heightSlider" destination="Pky-qY-oVp" id="ZLi-1G-Fba"/>
                         <outlet property="weightLabel" destination="LTF-aL-8qu" id="YBb-fb-8pa"/>
+                        <outlet property="weightSlider" destination="s2X-C5-Zcz" id="Nnh-by-qMj"/>
                         <segue destination="lkq-xS-Cin" kind="presentation" identifier="goToResult" id="pic-tP-YxA"/>
                     </connections>
                 </viewController>
